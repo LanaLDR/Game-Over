@@ -1,0 +1,26 @@
+.logo-box{
+  height: 823px;
+  display: block;
+  box-sizing: content-box;
+}
+
+.container_logo-box {
+  position: relative;
+}
+
+.logo-box__text:after {
+  background-image: url("../img/figma/logo.png");
+  content: "";
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  display: block;
+  width: 1180px;
+  height: 823px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-box__text {
+  height: 823px;
+}

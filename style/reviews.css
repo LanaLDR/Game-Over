@@ -1,0 +1,91 @@
+.container-reviews {
+  max-width: 980px;
+  display: flex;
+  min-height: 1058px;
+}
+
+.reviews__title{
+
+}
+
+.reviews-list__item{
+  min-width: 980px;
+  min-height: 319px;
+  text-align: center;
+  margin-bottom: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.reviews__item__Max-photo {
+  content: "";
+  background-image: url("../img/figma/MaxSamoilov.png");
+  width: 280px;
+  height: 280px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  margin-bottom: 11px;
+  margin-right: 20px;
+}
+
+.reviews__quote {
+  max-width: 680px;
+  max-height: 88px;
+  display: flex;
+  text-align: left;
+}
+
+.reviews__quote blockquote {
+  margin: 0;
+  padding-top: 52px;
+}
+
+.reviews__quote {
+  margin: 0;
+  display: inline-block;
+}
+
+
+.reviews__item__name {
+  min-width: 280px;
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.reviews__item__Oksana-photo {
+  content: "";
+  background-image: url("../img/figma/OksanaGrigoreva.png");
+  width: 280px;
+  height: 280px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  margin-bottom: 11px;
+  margin-right: 20px;
+}
+
+.reviews__item__Nikita-photo {
+  content: "";
+  background-image: url("../img/figma/NikitaYashenko.png");
+  width: 280px;
+  height: 280px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  margin-bottom: 11px;
+  margin-right: 20px;
+}
+
+.reviews-list__item-Nikita {
+  margin-bottom: 0;
+}

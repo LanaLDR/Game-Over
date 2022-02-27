@@ -1,0 +1,61 @@
+.halls__list {
+  display: inline-block;
+}
+
+.halls__item_vibes {
+  background-image: url("../img/figma/Halls_Vibes.jpg");
+  width: 580px;
+  background-size: contain;
+  height: 349px;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  padding-top: 135px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  float: left;
+}
+
+.halls__item_star-wars {
+  background-image: url("../img/figma/Halls_SW.jpg");
+  width: 580px;
+  background-size: contain;
+  height: 349px;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  padding-top: 135px;
+  margin-bottom: 20px;
+}
+
+.halls__item_wild-west {
+  background-image: url("../img/figma/Halls_Wild.jpg");
+  width: 580px;
+  background-size: contain;
+  height: 349px;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  padding-top: 135px;
+  float: left;
+  margin-right: 20px;
+}
+
+.halls__item_neon {
+  background-image: url("../img/figma/Halls_Neon.jpg");
+  width: 580px;
+  background-size: contain;
+  height: 349px;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  padding-top: 135px;
+}

@@ -1,0 +1,86 @@
+.contacts__list {
+  list-style-type: none;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  white-space: pre-line;
+  padding-left: 0;
+}
+
+.contacts__item_geo {
+  padding-left: 60px;
+  background-image: url("../img/figma/location.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 32px 32px;
+}
+
+.contacts__item_call {
+  padding-left: 60px;
+  background-image: url("../img/figma/call.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 32px 32px;
+}
+
+.contacts__item_mail {
+  padding-left: 60px;
+  background-image: url("../img/figma/email.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 32px 32px;
+}
+
+.contacts-social__list {
+  list-style-type: none;
+  margin: 0;
+
+}
+
+.contacts-social__item{
+  display: inline;
+
+}
+
+.contacts-social__item-telegram {
+  content: "";
+  background-image: url("../img/figma/telegram.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.contacts-social__item-vk{
+  content: "";
+  background-image: url("../img/figma/entypo-social_vk-with-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  margin-right: 27px;
+}
+
+.contacts-social__item-instagram {
+  content: "";
+  background-image: url("../img/figma/entypo-social_instagram-with-circle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  margin-right: 28px;
+}
+
+.contacts-social__item-facebook {
+  content: url("../img/figma/facebook.svg");
+  background-image: url("../img/figma/facebook.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  margin-right: 26px;
+}

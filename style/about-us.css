@@ -1,0 +1,47 @@
+.container_about-us{
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 1180px;
+  display: flex;
+}
+
+.about-us__quote p{
+  text-transform: uppercase;
+  font-size: 44px;
+  line-height: 50px;
+  width: 469px;
+  white-space: pre-line;
+}
+
+.about-us__quote-cite {
+  background-image: url("../img/figma/Boss.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 109px;
+  width: 389px;
+  margin-left: 80px;
+  font-style: normal;
+}
+
+.about-us__cite {
+  display: block;
+  max-width: 500px;
+}
+
+.about-us__cite p{
+  margin-top: 0;
+}
+
+.about-us__cite>p:nth-child(2){
+  margin-bottom: 60px;
+}
+
+.about-us__photos {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 596px;
+  background-image: url("../img/figma/photos.png");
+  margin-right: 80px;
+}
