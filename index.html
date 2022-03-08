@@ -7,6 +7,27 @@
   <link rel="stylesheet" href="style/faq.css">
 </head>
 <body class="page">
+<header>
+  <section class="menu">
+    <div class="container container-navigation">
+      <div class="navigation-box">
+        <img src="img/figma/logo.svg" alt="Логотип компании GO">
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">Залы</li>
+          <li class="navigation__item">О нас</li>
+          <li class="navigation__item">Бронь</li>
+          <li class="navigation__item">Отзывы</li>
+          <li class="navigation__item">Контакты</li>
+        </ul>
+      </nav>
+      <div class="navigation-box">
+        <a href=""><button class="navigation__call">Заказать звонок</button></a>
+      </div>
+    </div>
+  </section>
+</header>
 <main>
   <section class="logo-box">
     <div class="container container_logo-box">
@@ -14,6 +35,31 @@
         <h1 class="page__title">Game Over</h1>
         <p class="page__subtitle">Новый формат игр и отдыха</p>
       </div>
+    </div>
+  </section>
+  <section class="vacation-with-friends">
+    <div class="container">
+      <h2 class="vacation-with-friends__title">У нас есть все для классного отдыха с друзьями!</h2>
+      <ul class="vacation-with-friends__list">
+        <li class="vacation-with-friends__item vacation-with-friends__item-vr">
+          <p>VR очки</p>
+        </li>
+        <li class="vacation-with-friends__item vacation-with-friends__item-audio">
+          <p>Аудио-система 5.1 с отличным звуком</p>
+        </li>
+        <li class="vacation-with-friends__item vacation-with-friends__item-karaoke">
+          <p>Караоке (4 микрофона)</p>
+        </li>
+        <li class="vacation-with-friends__item vacation-with-friends__item-board-game">
+          <p>Настольные игры</p>
+        </li>
+        <li class="vacation-with-friends__item vacation-with-friends__item-cinema">
+          <p>Кино сервисы Netflix, IVI, MegoGo, КиноПоиск, Okko</p>
+        </li>
+        <li class="vacation-with-friends__item vacation-with-friends__item-ps">
+          <p>РlаyStаtiоn 5</p>
+        </li>
+      </ul>
     </div>
   </section>
   <section id="halls" class="halls">
@@ -26,6 +72,139 @@
         <li class="halls__item halls__item_neon">Neon style</li>
       </ul>
     </div>
+  </section>
+  <section id="booking" class="booking">
+  <div class="container">
+    <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+      <h2>Забронировать зал просто</h2>
+      <fieldset>
+        <label>
+          Выбрать зал
+          <select name="halls">
+            <option value="vibes">80's vibes</option>
+            <option value="StarWars">Star wars</option>
+            <option value="WildWest">Wild west</option>
+            <option value="NeonStyle">Neon style</option>
+          </select>
+        </label>
+      </fieldset>
+      <h3>Собери набор развелечений</h3>
+      <div class="take-funny">
+        <div class="console">
+            <p>Приставка</p>
+            <ul class="booking__list">
+              <li class="booking__item">
+                <label>
+                  <input type="radio" name="console" value="PlayStation5">
+                  PlayStation 5
+                </label>
+              </li>
+              <li class="booking__item">
+                <label>
+                  <input type="radio" name="console" value="SegaMegaDrive">
+                  Sega Mega Drive
+                </label>
+              </li>
+              <li class="booking__item">
+                <label>
+                  <input type="radio" name="console" value="XboxOneS">
+                  X-box One S
+                </label>
+              </li>
+              <li class="booking__item">
+                <label>
+                  <input type="radio" name="console" value="Dendy">
+                  Dendy
+                </label>
+              </li>
+            </ul>
+        </div>
+        <div class="board-game">
+            <p>Настольные игры</p>
+            <ul class="booking__list">
+              <li class="booking__item">
+                <label>
+                  <input type="checkbox" name="BoardGame" value="Jenga">
+                  Jenga
+                </label>
+              </li>
+              <li class="booking__item">
+                <label>
+                  <input type="checkbox" name="BoardGame" value="Monopoly">
+                  Monopoly
+                </label>
+              </li>
+              <li class="booking__item">
+                <label>
+                  <input type="checkbox" name="BoardGame" value="Manchkin">
+                  Manchkin
+                </label>
+              </li>
+              <li class="booking__item">
+                <label>
+                  <input type="checkbox" name="BoardGame" value="Alias">
+                  Alias
+                </label>
+              </li>
+            </ul>
+        </div>
+        <div class="optional">
+            <p>Дополнительно</p>
+            <ul class="booking__list">
+              <li class="booking__item">
+                <label>
+                  <input type="checkbox" name="additionally" value="karaoke">
+                  Караоке
+                </label>
+              </li>
+              <li class="booking__item">
+                <label>
+                  <input type="checkbox" name="additionally" value="VR">
+                  VR
+                </label>
+              </li>
+            </ul>
+        </div>
+      </div>
+        <h3>Выберите дату и время</h3>
+      <div class="take-time">
+        <div class="take-time__box">
+          <label>
+            <input type="date" data-uk-datepicker="{format:'DD.MM.YYYY'}" name="date" required placeholder="Дата">
+          </label>
+          <label>
+            <input type="time" name="time" required placeholder="Время">
+          </label>
+          <label>
+            <input type="number" name="persons" required placeholder="Сколько человек">
+          </label>
+        </div>
+        <div class="take-time__box">
+          <label>
+            <span>Имя*</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Фамилия*
+            <input type="text" name="surname" required>
+          </label>
+        </div>
+        <div class="take-time__box">
+          <label>
+            Номер телефона*
+            <input type="tel" name="number" required>
+          </label>
+          <label>
+            Email*
+            <input type="email" name="email" required>
+          </label>
+        </div>
+      </div>
+
+      <br>
+      <button type="submit">Забронировать</button>
+    </form>
+  </div>
   </section>
   <section id="AboutUs" class="about-us">
     <h2 class="about-us__title">О нас</h2>
@@ -108,33 +287,41 @@
   <section id="contacts" class="contacts">
     <div class="container">
       <h2 class="contacts__title"> Контакты</h2>
-      <ol class="contacts__list">
-        <li class="contacts__item contacts__item_geo">г. Москва
-          ул. Аквамарина, 16
-        </li>
-        <li class="contacts__item contacts__item_call"><a href="tel:89509302893">8(950)9302893</a></li>
-        <li class="contacts__item contacts__item_mail"><a href="mailto:GameOver@gmail.com">GameOver@gmail.com</a></li>
-      </ol>
-      <div class="contacts-social">
-        <ul class="contacts-social__list">
-          <li class="contacts-social__item-instagram">
-            <a href="https://www.instagram.com/" target="_blank">
-            </a>
-          </li>
-          <li class="contacts-social__item-vk">
-            <a href="https://vk.com/" target="_blank">
-            </a>
-          </li>
-          <li class="contacts-social__item-facebook">
-            <a href="https://www.facebook.com/" target="_blank">
-            </a>
-          </li>
-          <li class="contacts-social__item-telegram">
-            <a href="https://web.telegram.org/" target="_blank">
-            </a>
-          </li>
-        </ul>
+      <div class="contacts-flex-box">
+        <div class="contacts-text">
+          <ol class="contacts__list">
+            <li class="contacts__item contacts__item_geo">г. Москва
+              ул. Аквамарина, 16
+            </li>
+            <li class="contacts__item contacts__item_call"><a href="tel:89509302893">8(950)9302893</a></li>
+            <li class="contacts__item contacts__item_mail"><a href="mailto:GameOver@gmail.com">GameOver@gmail.com</a></li>
+          </ol>
+          <div class="contacts-social">
+            <ul class="contacts-social__list">
+              <li class="contacts-social__item">
+                <a href="https://www.instagram.com/" target="_blank" class="contacts-social__link-instagram">
+                </a>
+              </li>
+              <li class="contacts-social__item">
+                <a href="https://vk.com/" target="_blank" class="contacts-social__link-vk">
+                </a>
+              </li>
+              <li class="contacts-social__item">
+                <a href="https://www.facebook.com/" target="_blank" class="contacts-social__link-facebook">
+                </a>
+              </li>
+              <li class="contacts-social__item">
+                <a href="https://web.telegram.org/" target="_blank" class="contacts-social__link-telegram">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contacts__map">
+        </div>
       </div>
+      <aside class="copyright">
+      </aside>
     </div>
   </section>
 </footer>

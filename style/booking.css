@@ -1,0 +1,39 @@
+.booking {
+  background-color: #440F51;
+}
+
+.booking-fieldset__title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.take-funny {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  margin-bottom: 67px;
+  flex-basis: 280px;
+}
+
+.booking__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.take-time {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin-bottom: 67px;
+  flex-basis: 280px;
+}
+
+input[type=date], input[type=time] {
+  width: 134px;
+}
