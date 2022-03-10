@@ -85,3 +85,29 @@ p {
 footer {
   background: linear-gradient(180deg, #1B1A1B 0%, #370A37 100%);
 }
+
+button {
+  text-transform: uppercase;
+}
+
+input:focus {
+  border: 2px solid #CD06FF;
+  outline: none;
+}
+
+input[type="radio"] {
+  width: 27px;
+  height: 27px;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  background-image: url("../img/figma/radio_checkbox _focus.svg");
+  background-size: contain;
+}
+

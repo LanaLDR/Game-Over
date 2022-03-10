@@ -4,6 +4,10 @@
   box-sizing: content-box;
 }
 
+.page__subtitle {
+  margin-bottom: 30px;
+}
+
 .container_logo-box {
   position: relative;
 }
@@ -12,15 +16,114 @@
   background-image: url("../img/figma/logo.png");
   content: "";
   background-repeat: no-repeat;
-  background-position: right bottom;
   display: block;
-  width: 1180px;
-  height: 823px;
+  width: 675px;
+  height: 762px;
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .logo-box__text {
   height: 823px;
+  z-index: 1;
+}
+
+.logo-box__preview-purple {
+  display: flex;
+  text-transform: uppercase;
+  padding-left: 63px;
+  gap: 103px;
+  height: 141px;
+  align-items: flex-end;
+}
+
+.preview-halls {
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 141px;
+  color: #CD06FF;
+  margin-bottom: 0;
+}
+
+.preview-new {
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 106px;
+  color: #CD06FF;
+  margin-bottom: 0;
+}
+
+.logo-box__preview-purple__text {
+  display: flex;
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  gap: 43px;
+  margin-bottom: 150px;
+}
+
+.logo-box__preview-purple__text p {
+  max-width: 193px;
+}
+
+/*.logo-box__buttons {
+  display: flex;
+  gap: 165px;
+  z-index: 199;
+}*/
+
+.logo-box__button-booking {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #6C0287;
+  border-radius: 10px;
+  border: none;
+  padding: 25px 69px;
+}
+
+.logo-box__button-booking:hover {
+  background: #840AA3;
+}
+
+.logo-box__button-booking:active {
+  background: #640AA3;
+}
+
+.logo-box__button-booking:focus {
+  background: #840AA3;
+}
+
+.logo-box__button-down {
+  background-image: url("../img/figma/button_down.svg");
+  height: 97px;
+  position: absolute;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  z-index: 3;
+  background-repeat: no-repeat;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.logo-box__button-down:hover {
+  background-image: url("../img/figma/button_down_hover.svg");
+}
+
+.logo-box__button-down:active {
+  background-image: url("../img/figma/button_down_active.svg");
+}
+
+.logo-box__button-down:focus {
+  background-image: url("../img/figma/button_down_focus.svg");
+  height: 99px;
 }

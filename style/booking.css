@@ -37,3 +37,38 @@ fieldset {
 input[type=date], input[type=time] {
   width: 134px;
 }
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.booking-submit {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 16px 50px;
+  color: #6C0287;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  border: 3px solid #ffffff;
+}
+
+.booking-submit:hover {
+  background: #EADEED;
+  border: 3px solid #6C0287;
+  border-radius: 10px;
+}
+
+.booking-submit:active {
+  background: #EADEED;
+}
+
+.booking-submit:focus {
+  background: #FFFFFF;
+  border: 3px solid #6C0287;
+  border-radius: 10px;
+}
+
