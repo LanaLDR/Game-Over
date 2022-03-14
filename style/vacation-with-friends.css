@@ -1,3 +1,7 @@
+.vacation-with-friends {
+  perspective: 300px;
+}
+
 .vacation-with-friends__list {
   display: flex;
   gap: 20px;
@@ -59,4 +63,10 @@
   background-size: contain;
   height: 228px;
   background-repeat: no-repeat;
+}
+
+.vacation-with-friends__item:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 500ms;
+  transition-timing-function: linear;
 }

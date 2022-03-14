@@ -27,6 +27,9 @@ img {
 button {
   padding: 0;
   cursor: pointer;
+  text-transform: uppercase;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
 }
 
 a {
@@ -86,10 +89,6 @@ footer {
   background: linear-gradient(180deg, #1B1A1B 0%, #370A37 100%);
 }
 
-button {
-  text-transform: uppercase;
-}
-
 input:focus {
   border: 2px solid #CD06FF;
   outline: none;
@@ -111,3 +110,7 @@ input[type="radio"]:focus {
   background-size: contain;
 }
 
+input {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+}
