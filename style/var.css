@@ -1,0 +1,6 @@
+:root {
+  --main-color: #CD06FF;
+  --active-color: #640AA3;
+  --hover-color: #840AA3;
+  --reviews-gradient: radial-gradient(50% 50% at 50% 50%, rgba(196, 196, 196, 0) 0%, rgba(108, 2, 135, 0.5) 100%);
+}

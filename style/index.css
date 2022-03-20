@@ -1,4 +1,6 @@
+@import "var.css";
 @import "Global.css";
+@import "menu.css";
 @import "page.css";
 @import "faq.css";
 @import "Normalize.css";
@@ -9,4 +11,4 @@
 @import "reviews.css";
 @import "vacation-with-friends.css";
 @import "booking.css";
-@import "menu.css";
+

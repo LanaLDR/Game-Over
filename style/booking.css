@@ -2,6 +2,11 @@
   background-color: #440F51;
 }
 
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .booking-fieldset__title {
   text-align: center;
   padding-bottom: 40px;
@@ -13,13 +18,18 @@ fieldset {
   margin: 0;
 }
 
+.take-funny p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
 
 .take-funny {
   display: flex;
   gap: 100px;
   justify-content: space-between;
   margin-bottom: 67px;
-  flex-basis: 280px;
 }
 
 .booking__item:not(:last-child) {
@@ -29,22 +39,28 @@ fieldset {
 .take-time {
   display: flex;
   gap: 50px;
+  flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 67px;
-  flex-basis: 280px;
+  margin-bottom: 40px;
+  align-items: flex-start;
 }
 
 input[type=date], input[type=time] {
   width: 134px;
 }
 
-label {
+.take-funny__label {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
 }
 
 .booking-submit {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.booking-submit__button {
   background: #FFFFFF;
   border-radius: 10px;
   padding: 16px 50px;
@@ -54,6 +70,7 @@ label {
   line-height: 28px;
   text-transform: uppercase;
   border: 3px solid #ffffff;
+  max-width: 300px;
 }
 
 .booking-submit:hover {
@@ -72,3 +89,75 @@ label {
   border-radius: 10px;
 }
 
+.take-time__box {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 300px;
+  grid-gap: 36px 32px;
+  flex-wrap: wrap;
+  align-self: flex-end;
+}
+
+.take-time__box span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+
+.take-time__box-text {
+  align-self: flex-end;
+  gap: 14px;
+}
+
+.take-hall {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.take-hall__checkbox {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.take-hall__label {
+  color: #000000;
+  display: inline-flex;
+  background: #FFFFFF;
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+  width: 250px;
+  height: 55px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px 15px;
+}
+
+.take-hall__label span {
+  width: 220px;
+  height: 40px;
+}
+
+.take-hall__label:hover {
+  background: #EADEED;
+  border: 3px solid #640AA3;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.take-hall__label:active {
+  background: #EADEED;
+  border: 3px solid #640AA3;
+  border-radius: 8px;
+}
+
+.take-hall__label:focus {
+  background: #FFFFFF;
+  border: 3px solid #640AA3;
+  border-radius: 8px;
+}

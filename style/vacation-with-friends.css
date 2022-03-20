@@ -1,12 +1,10 @@
-.vacation-with-friends {
-  perspective: 300px;
-}
-
 .vacation-with-friends__list {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
   flex-wrap: wrap;
+  min-height: 566px;
+  align-content: flex-start;
+  row-gap: 40px;
 }
 
 .vacation-with-friends__item {
@@ -49,6 +47,7 @@
   background-size: contain;
   height: 228px;
   background-repeat: no-repeat;
+
 }
 
 .vacation-with-friends__item-cinema {
@@ -56,6 +55,7 @@
   background-size: contain;
   height: 228px;
   background-repeat: no-repeat;
+
 }
 
 .vacation-with-friends__item-ps {
@@ -69,4 +69,9 @@
   transform: scale(1.1, 1.1);
   transition-duration: 500ms;
   transition-timing-function: linear;
+}
+
+.vacation-with-friends__item-translate {
+  transform: translateY(70px);
+  transform-origin: 50% -700px ;
 }

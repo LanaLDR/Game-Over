@@ -19,7 +19,7 @@
 
 .reviews__item__Max-photo {
   content: "";
-  background-image: url("../img/figma/MaxSamoilov.png");
+  background-image: var(--reviews-gradient), url("../img/figma/MaxSamoilov.png");
   width: 280px;
   height: 280px;
   background-size: contain;
@@ -29,6 +29,7 @@
   float: left;
   margin-bottom: 11px;
   margin-right: 20px;
+  border-radius: 140px;
 }
 
 .reviews__quote {
@@ -60,7 +61,7 @@
 
 .reviews__item__Oksana-photo {
   content: "";
-  background-image: url("../img/figma/OksanaGrigoreva.png");
+  background-image: var(--reviews-gradient), url("../img/figma/OksanaGrigoreva.png");
   width: 280px;
   height: 280px;
   background-size: contain;
@@ -70,11 +71,12 @@
   float: left;
   margin-bottom: 11px;
   margin-right: 20px;
+  border-radius: 140px;
 }
 
 .reviews__item__Nikita-photo {
-  content: "";
-  background-image: url("../img/figma/NikitaYashenko.png");
+  content: " ";
+  background-image: var(--reviews-gradient), url("../img/figma/NikitaYashenko.png");
   width: 280px;
   height: 280px;
   background-size: contain;
@@ -84,6 +86,7 @@
   float: left;
   margin-bottom: 11px;
   margin-right: 20px;
+  border-radius: 140px;
 }
 
 .reviews-list__item-Nikita {

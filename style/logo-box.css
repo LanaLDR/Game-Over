@@ -43,7 +43,7 @@
   font-weight: 900;
   font-size: 100px;
   line-height: 141px;
-  color: #CD06FF;
+  color: var(--main-color, #CD06FF);
   margin-bottom: 0;
 }
 
@@ -51,7 +51,7 @@
   font-weight: 900;
   font-size: 75px;
   line-height: 106px;
-  color: #CD06FF;
+  color: var(--main-color, #CD06FF);
   margin-bottom: 0;
 }
 
@@ -87,15 +87,15 @@
 }
 
 .logo-box__button-booking:hover {
-  background: #840AA3;
+  background: var(--hover-color, #840AA3);
 }
 
 .logo-box__button-booking:active {
-  background: #640AA3;
+  background: var(--active-color, #640AA3);
 }
 
 .logo-box__button-booking:focus {
-  background: #840AA3;
+  background: var(--hover-color, #840AA3);
 }
 
 .logo-box__button-down {
