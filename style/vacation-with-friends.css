@@ -1,10 +1,12 @@
+.vacation-with-friends {
+  min-height: 808px;
+}
+
 .vacation-with-friends__list {
   display: flex;
-  gap: 20px;
+  gap: 40px 20px;
   flex-wrap: wrap;
-  min-height: 566px;
   align-content: flex-start;
-  row-gap: 40px;
 }
 
 .vacation-with-friends__item {
@@ -15,6 +17,9 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 28px;
+  background-size: contain;
+  height: 228px;
+  background-repeat: no-repeat;
 }
 
 .vacation-with-friends__item p {
@@ -23,46 +28,27 @@
 
 .vacation-with-friends__item-vr {
   background-image: url("../img/vr.jpg");
-  background-size: contain;
-  height: 228px;
-  background-repeat: no-repeat;
 }
 
 .vacation-with-friends__item-audio {
   background-image: url("../img/audio.jpg");
-  background-size: contain;
-  height: 228px;
-  background-repeat: no-repeat;
 }
 
 .vacation-with-friends__item-karaoke {
   background-image: url("../img/micro.jpg");
-  background-size: contain;
-  height: 228px;
-  background-repeat: no-repeat;
 }
 
 .vacation-with-friends__item-board-game {
   background-image: url("../img/game.jpg");
-  background-size: contain;
-  height: 228px;
-  background-repeat: no-repeat;
-
 }
 
 .vacation-with-friends__item-cinema {
   background-image: url("../img/netflix.jpg");
-  background-size: contain;
-  height: 228px;
-  background-repeat: no-repeat;
 
 }
 
 .vacation-with-friends__item-ps {
   background-image: url("../img/sony.jpg");
-  background-size: contain;
-  height: 228px;
-  background-repeat: no-repeat;
 }
 
 .vacation-with-friends__item:hover {
@@ -74,4 +60,78 @@
 .vacation-with-friends__item-translate {
   transform: translateY(70px);
   transform-origin: 50% -700px ;
+}
+
+@media (max-width: 1024px) {
+  .vacation-with-friends {
+
+    padding: 40px 0 35px 0;
+  }
+
+  .vacation-with-friends__list {
+    gap: 30px 21.5px;
+  }
+
+  .vacation-with-friends__item {
+    font-size: 20px;
+    line-height: 28px;
+    flex-basis: 287px;
+    max-height: 172px;
+    padding: 114px 20px 0 20px;
+  }
+
+  .vacation-with-friends__item-cinema {
+    padding-top: 83px;
+  }
+
+  .vacation-with-friends__item-translate{
+    transform: translateY(53px);
+  }
+}
+
+@media (max-width: 768px) {
+  .vacation-with-friends {
+    padding: 40px 0 30px 0;
+  }
+
+  .vacation-with-friends__list {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .vacation-with-friends__item {
+    flex-basis: 334px;
+    padding: 132px 30px 0 30px;
+    max-height: 200px;
+  }
+
+  .vacation-with-friends__item-translate {
+    transform: translateY(0);
+    transform-origin: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .vacation-with-friends {
+    min-height: 296px;
+    padding: 24px 0 15px 0;
+  }
+
+  .vacation-with-friends__title {
+    margin-bottom: 15px;
+  }
+
+  .vacation-with-friends__list {
+    gap: 10px;
+  }
+
+  .vacation-with-friends__item {
+    flex-basis: 135px;
+    padding: 30px 10px 0 10px;
+    font-size: 10px;
+    line-height: 14px;
+    max-height: 75px;
+    background-size: cover;
+  }
+
 }

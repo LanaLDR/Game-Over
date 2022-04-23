@@ -1,61 +1,91 @@
 .halls__list {
-  display: inline-block;
+  display: flex;
+  flex-basis: content;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: space-between;
+}
+
+.halls__item {
+  flex-basis: 580px;
+  background-size: contain;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  background-repeat: no-repeat;
+  height: 349px;
+  padding-top: 135px;
 }
 
 .halls__item_vibes {
   background-image: url("../img/figma/Halls_Vibes.jpg");
-  width: 580px;
-  background-size: contain;
-  height: 349px;
-  text-transform: uppercase;
-  font-size: 70px;
-  font-weight: 700;
-  text-align: center;
-  display: inline-block;
-  padding-top: 135px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  float: left;
 }
 
 .halls__item_star-wars {
   background-image: url("../img/figma/Halls_SW.jpg");
-  width: 580px;
-  background-size: contain;
-  height: 349px;
-  text-transform: uppercase;
-  font-size: 70px;
-  font-weight: 700;
-  text-align: center;
-  display: inline-block;
-  padding-top: 135px;
-  margin-bottom: 20px;
 }
 
 .halls__item_wild-west {
   background-image: url("../img/figma/Halls_Wild.jpg");
-  width: 580px;
-  background-size: contain;
-  height: 349px;
-  text-transform: uppercase;
-  font-size: 70px;
-  font-weight: 700;
-  text-align: center;
-  display: inline-block;
-  padding-top: 135px;
-  float: left;
-  margin-right: 20px;
 }
 
 .halls__item_neon {
   background-image: url("../img/figma/Halls_Neon.jpg");
-  width: 580px;
-  background-size: contain;
-  height: 349px;
-  text-transform: uppercase;
-  font-size: 70px;
-  font-weight: 700;
-  text-align: center;
-  display: inline-block;
-  padding-top: 135px;
+}
+
+@media (max-width: 1024px) {
+  .halls {
+    padding: 35px 0 70px 0;
+  }
+
+  .halls__item {
+    padding: 73px 94px;
+    font-size: 50px;
+    line-height: 60px;
+    flex-basis: 442px;
+    height: 267px;
+  }
+}
+
+@media (max-width: 768px) {
+  .halls {
+    padding: 30px 0 60px 0;
+  }
+
+  .halls__list {
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .halls__item {
+    padding: 60px 100px;
+    font-size: 40px;
+    line-height: 50px;
+    flex-basis: 334px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .halls {
+    padding: 15px 0 30px 0;
+  }
+
+  .halls__title {
+    margin-bottom: 15px;
+  }
+
+  .halls__list {
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .halls__item {
+    padding: 50px 98px;
+    font-size: 26px;
+    line-height: 34px;
+    flex-basis: 280px;
+    height: 168px;
+  }
 }

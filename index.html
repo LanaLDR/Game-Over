@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="style/index.css">
   <title>Модуль 1 Урок 1</title>
   <link rel="stylesheet" href="style/faq.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="page">
 <header>
@@ -14,6 +15,10 @@
         <img src="img/figma/logo.svg" alt="Логотип компании GO">
       </div>
       <nav class="navigation">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
         <ul class="navigation__list">
           <li class="navigation__item"><a href="#halls">Залы</a></li>
           <li class="navigation__item"><a href="#AboutUs">О нас</a></li>
@@ -42,12 +47,12 @@
           <p>Тематических зала</p>
           <p>Новейшая аппаратура</p>
         </div>
-          <button class="logo-box__button-booking" type="button">Забронировать</button>
-          <button class="logo-box__button-down"></button>
+          <a href="#booking"><button class="logo-box__button-booking" type="button">Забронировать</button></a>
+          <a href="#vacation-with-friends"><button class="logo-box__button-down"></button></a>
       </div>
     </div>
   </section>
-  <section class="vacation-with-friends">
+  <section class="vacation-with-friends" id="vacation-with-friends">
     <div class="container">
       <h2 class="vacation-with-friends__title">У нас есть все для классного отдыха с друзьями!</h2>
       <ul class="vacation-with-friends__list">
@@ -74,7 +79,7 @@
   </section>
   <section id="halls" class="halls">
     <div class="container">
-      <h2 class="halls">Наши залы</h2>
+      <h2 class="halls__title">Наши залы</h2>
       <ul class="halls__list">
         <li class="halls__item halls__item_vibes">80's Vibes</li>
         <li class="halls__item halls__item_star-wars">Star wars</li>
@@ -86,8 +91,8 @@
   <section id="booking" class="booking">
   <div class="container">
     <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="booking-form">
-      <h2>Забронировать зал просто</h2>
-      <h3>Выбери зал</h3>
+      <h2 class="booking__title">Забронировать зал просто</h2>
+      <h3 class="booking__subtitle">Выбери зал</h3>
       <div class="take-hall">
         <label class="take-hall__label">
           <span>
@@ -117,7 +122,7 @@
       <h3>Собери набор развелечений</h3>
       <div class="take-funny">
         <div class="console">
-            <p>Приставка</p>
+            <p class="block__name">Приставка</p>
             <ul class="booking__list">
               <li class="booking__item">
                 <label class="take-funny__label">
@@ -146,7 +151,7 @@
             </ul>
         </div>
         <div class="board-game">
-            <p>Настольные игры</p>
+            <p class="block__name">Настольные игры</p>
             <ul class="booking__list">
               <li class="booking__item">
                 <label class="take-funny__label">
@@ -175,7 +180,7 @@
             </ul>
         </div>
         <div class="optional">
-            <p>Дополнительно</p>
+            <p class="block__name">Дополнительно</p>
             <ul class="booking__list">
               <li class="booking__item">
                 <label class="take-funny__label">
@@ -197,26 +202,26 @@
         <div class="take-time__box">
             <input type="date" data-uk-datepicker="{format:'DD.MM.YYYY'}" name="date" required>
             <input type="time" name="time" required>
-            <input type="number" name="persons" required placeholder="Сколько человек">
+            <input type="number" name="persons" required placeholder="Сколько человек" class="booking__input-long">
         </div>
         <div class="take-time__box take-time__box-text">
           <label>
             <span>Имя*</span>
-            <input type="text" name="name" required>
+            <input type="text" name="name" required class="booking__input-long">
           </label>
           <label>
             <span>Фамилия*</span>
-            <input type="text" name="surname" required>
+            <input type="text" name="surname" required class="booking__input-long">
           </label>
         </div>
         <div class="take-time__box take-time__box-text">
           <label>
             <span>Номер телефона*</span>
-            <input type="tel" name="number" required>
+            <input type="tel" name="number" required class="booking__input-long">
           </label>
           <label>
             <span>Email*</span>
-            <input type="email" name="email" required>
+            <input type="email" name="email" required class="booking__input-long">
           </label>
         </div>
       </div>
@@ -231,18 +236,19 @@
     <div class="container container_about-us">
       <div class="about-us__photos">
       </div>
-      <div class="about-us__cite">
+      <div class="about-us__text">
         <p>Для наших гостей мы создали концептуально новое игровое простанство виртуальной реальности в центральной
           части города.</p>
         <p>Каждый день мы стараемся создавать для вас самую лучшую игровую атмосферу и радовать Вас топовыми игровыми
           разработками со всего мира.</p>
-        <blockquote class="about-us__quote">
-          <p>GAME OVER —
-            это место незабываемых впечатлений</p>
-          <div class="about-us__quote-cite">
-            <cite>Аркадий Абакшин, создатель игровой территории GAME OVER</cite>
-          </div>
-        </blockquote>
+      </div>
+      <div class="about-us__cite">
+        <div class="about-us__quote">
+          <p>GAME OVER — это место незабываемых впечатлений</p>
+        </div>
+        <div class="about-us__quote-cite">
+          <cite>Аркадий Абакшин, создатель игровой территории GAME OVER</cite>
+        </div>
       </div>
     </div>
   </section>
@@ -251,9 +257,11 @@
     <div class="container container-reviews">
       <ul class="reviews-list">
         <li class="reviews-list__item">
-          <div class="reviews__item__Max-photo">
-          </div>
-          <p class="reviews__item__name">Макс Самойлов</p>
+         <div class="reviews-box">
+           <div class="reviews__item__photo reviews__item__photo-Max">
+           </div>
+           <p class="reviews__item__name">Макс Самойлов</p>
+         </div>
           <div class="reviews__quote">
             <blockquote>
               Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто бомба, никогда
@@ -261,9 +269,9 @@
             </blockquote>
           </div>
         </li>
-        <li class="reviews-list__item">
+        <li class="reviews-list__item reviews-list__item-Oksana">
           <div class="reviews__item">
-            <div class="reviews__item__Oksana-photo">
+            <div class="reviews__item__photo reviews__item__photo-Oksana">
             </div>
             <p class="reviews__item__name">Оксана Григорьева</p>
           </div>
@@ -276,7 +284,7 @@
         </li>
         <li class="reviews-list__item reviews-list__item-Nikita">
           <div class="reviews__item">
-            <div class="reviews__item__Nikita-photo">
+            <div class="reviews__item__photo reviews__item__photo-Nikita">
             </div>
             <p class="reviews__item__name">Никита Ященко</p>
           </div>

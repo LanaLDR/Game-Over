@@ -1,6 +1,7 @@
 html {
   position: relative;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -17,11 +18,6 @@ body {
   font-size: 20px;
   min-width: 320px;
   min-height: 100vh;
-}
-
-input {
-  width: 300px;
-  height: 52px;
 }
 
 img {
@@ -79,6 +75,10 @@ h2 {
   padding: 0 100px;
 }
 
+blockquote {
+  margin: 0;
+}
+
 ul, ol {
   margin: 0;
 }
@@ -89,6 +89,7 @@ h3 {
 
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 footer {
@@ -120,4 +121,67 @@ input[type="radio"]:focus {
 input {
   transition-timing-function: linear;
   transition-duration: 200ms;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 60px 0 60px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px 0 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 0 20px 0 20px;
+  }
+
+  h2 {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
 }

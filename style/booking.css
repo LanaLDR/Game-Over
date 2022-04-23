@@ -47,6 +47,7 @@ fieldset {
 
 input[type=date], input[type=time] {
   width: 134px;
+  height: 52px;
 }
 
 .take-funny__label {
@@ -70,20 +71,20 @@ input[type=date], input[type=time] {
   line-height: 28px;
   text-transform: uppercase;
   border: 3px solid #ffffff;
-  max-width: 300px;
+  width: 27%;
 }
 
-.booking-submit:hover {
+.booking-submit__button:hover {
   background: #EADEED;
   border: 3px solid #6C0287;
   border-radius: 10px;
 }
 
-.booking-submit:active {
+.booking-submit__button:active {
   background: #EADEED;
 }
 
-.booking-submit:focus {
+.booking-submit__button:focus {
   background: #FFFFFF;
   border: 3px solid #6C0287;
   border-radius: 10px;
@@ -107,7 +108,12 @@ input[type=date], input[type=time] {
 
 .take-time__box-text {
   align-self: flex-end;
+  flex-basis: 27%;
   gap: 14px;
+}
+
+.take-time__box-text label {
+  width: 100%;
 }
 
 .take-hall {
@@ -122,26 +128,29 @@ input[type=date], input[type=time] {
   position: absolute;
 }
 
+.booking__input-long {
+  width: 100%;
+  height: 52px;
+}
+
 .take-hall__label {
   color: #000000;
   display: inline-flex;
   background: #FFFFFF;
   border: 3px solid #ffffff;
   border-radius: 8px;
-  width: 250px;
-  height: 55px;
+  min-width: 250px;
+  min-height: 55px;
   font-weight: 700;
   font-size: 30px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  padding: 7px 15px;
+  justify-content: center;
+  align-items: center;
 }
 
-.take-hall__label span {
-  width: 220px;
-  height: 40px;
-}
+
 
 .take-hall__label:hover {
   background: #EADEED;
@@ -152,12 +161,185 @@ input[type=date], input[type=time] {
 
 .take-hall__label:active {
   background: #EADEED;
-  border: 3px solid #640AA3;
   border-radius: 8px;
+  border: 0;
 }
 
 .take-hall__label:focus {
   background: #FFFFFF;
   border: 3px solid #640AA3;
   border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .booking {
+    padding: 60px 0;
+  }
+
+  .booking__title {
+    margin-bottom: 25px;
+  }
+
+  .take-hall__label {
+    font-size: 20px;
+    line-height: 24px;
+    min-width: 180px;
+    max-height: 44px;
+  }
+
+  .booking-submit__button {
+    width: 27%;
+    padding: 13px 45px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking {
+    padding: 50px 0;
+  }
+
+  .booking__title {
+    margin-bottom: 25px;
+  }
+
+  .take-hall {
+    margin-bottom: 50px;
+  }
+
+  .take-hall__label {
+    font-size: 16px;
+    line-height: 20px;
+    min-width: 150px;
+    max-height: 38px;
+  }
+
+  .booking__list {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .take-funny {
+    justify-content: flex-start;
+    gap: 30px 140px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .booking-submit__button {
+    width: 27%;
+    padding: 13px 45px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .take-time {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .take-time__box {
+    flex-wrap: nowrap;
+    flex-basis: 54px;
+    align-self: flex-start;
+  }
+
+  .take-time__box-text {
+    flex-basis: 74px;
+    gap: 88px;
+  }
+
+  .booking__input-long {
+    width: 300px;
+  }
+
+  input[type='time'] {
+  margin-right: 55px;
+  margin-bottom: 42px;
+  }
+
+  .booking-submit__button {
+    width: 300px;
+    padding: 16px 50px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .block__name {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .booking {
+    padding: 30px 0;
+  }
+
+  .take-hall {
+    margin-bottom: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .take-hall__label {
+    font-size: 14px;
+    line-height: 18px;
+    min-width: 130px;
+    min-height: 30px;
+  }
+
+  .booking__list {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .take-funny {
+    margin-bottom: 30px;
+  }
+
+  .booking-submit__button {
+    width: 100%;
+    padding: 17px 58px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .take-time {
+    gap: 35px;
+  }
+
+  .take-time__box {
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-basis: 54px;
+    align-self: flex-start;
+  }
+
+  .take-time__box-text {
+    flex-basis: 74px;
+    gap: 15px;
+  }
+
+  .booking__input-long {
+    width: 280px;
+  }
+
+  input[type='time'] {
+    margin: 0;
+  }
+
+  .booking-submit__button {
+    width: 280px;
+    padding: 17px 58px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .block__name {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 }

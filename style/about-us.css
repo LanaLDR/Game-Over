@@ -1,47 +1,196 @@
 .container_about-us{
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  height: 596px;
+  align-content: space-between;
+}
+
+.about-us__text {
+  width: 43%;
+  height: 222px;
   font-size: 20px;
   line-height: 28px;
-  max-width: 1180px;
-  display: flex;
+  align-content: space-between;
+}
+
+.about-us__text p {
+  margin-bottom: 20px;
 }
 
 .about-us__quote p{
   text-transform: uppercase;
   font-size: 44px;
   line-height: 50px;
-  width: 469px;
-  white-space: pre-line;
+  width: 100%;
+}
+
+.about-us__quote p:before {
+  content: "“";
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 50px;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+
+.about-us__quote p:after {
+  content: "”";
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 50px;
+  margin-left: 10px;
+  color: var(--main-color);
 }
 
 .about-us__quote-cite {
   background-image: url("../img/figma/Boss.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
   padding-left: 109px;
   width: 389px;
-  margin-left: 80px;
   font-style: normal;
 }
 
 .about-us__cite {
-  display: block;
-  max-width: 500px;
-}
-
-.about-us__cite p{
-  margin-top: 0;
-}
-
-.about-us__cite>p:nth-child(2){
-  margin-bottom: 60px;
+  display: flex;
+  width: 43%;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .about-us__photos {
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
-  width: 600px;
+  width: 50%;
   height: 596px;
   background-image: url("../img/figma/photos.png");
-  margin-right: 80px;
+}
+
+@media (max-width: 1024px) {
+  .container_about-us {
+    height: 418px;
+    justify-content: stretch;
+    gap: 25px;
+  }
+
+  .about-us {
+    padding: 70px 0 35px 0;
+  }
+
+  .about-us__cite {
+    gap: 5px;
+  }
+
+  .about-us__text {
+    font-size: 18px;
+    line-height: 24px;
+    height: 195px;
+  }
+
+  .about-us__quote p {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .about-us__quote-cite {
+    width: 330px;
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 105px;
+    margin-left: 50px;
+  }
+
+  .about-us__photos {
+    width: 46%;
+    height: 417px;
+  }
+
+  .about-us__quote p:before, .about-us__quote p:after {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container_about-us {
+    height: 594px;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .about-us {
+    padding: 70px 0 35px 0;
+  }
+
+  .about-us__text {
+    font-size: 16px;
+    line-height: 22px;
+    height: 247px;
+    width: 40%;
+    align-self: center;
+  }
+
+  .about-us__cite {
+    font-size: 16px;
+    line-height: 22px;
+    width: 100%;
+    gap: 22px;
+  }
+
+  .about-us__quote  {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .about-us__photos {
+    height: 380px;
+    width: 55%;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-us {
+    padding: 30px 0 15px 0;
+  }
+
+  .about-us__title {
+    margin-bottom: 15px;
+  }
+
+  .container_about-us {
+    height: 594px;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .about-us__text {
+    font-size: 12px;
+    line-height: 16px;
+    height: 127px;
+    width: 100%;
+    order: -1;
+  }
+
+  .about-us__quote-cite {
+    font-size: 12px;
+    line-height: 16px;
+    width: 100%;
+    background-size: 56px 56px;
+    height: 56px;
+    padding-left: 67px;
+    margin: 0;
+    align-items: center;
+  }
+
+  .about-us__quote p, .about-us__quote p:before, .about-us__quote p:after  {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .about-us__photos {
+    height: 280px;
+    width: 100%;
+  }
 }

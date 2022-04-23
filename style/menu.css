@@ -7,6 +7,7 @@
 .navigation__list {
   display: flex;
   gap: 40px;
+  text-transform: uppercase;
 }
 
 .navigation-call {
@@ -16,13 +17,11 @@
   box-sizing: border-box;
   border-radius: 10px;
   padding: 12px 32px;
+  text-transform: uppercase;
 }
 
 .menu {
   padding-bottom: 0;
-  font-size: 22px;
-  line-height: 50px;
-  text-transform: uppercase;
 }
 
 .navigation-call:hover {
@@ -40,4 +39,68 @@
 
 .navigation__item:hover {
   color: #6C0287;
+}
+
+#menu__toggle {
+  opacity: 0;
+  display: none;
+}
+
+.menu__btn {
+  display: none; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  width: 54px;
+  height: 29px;
+  cursor: pointer;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  background-image: url("../img/figma/menu.svg");
+  width: 54px;
+  height: 29px;
+}
+
+@media (max-width: 1024px) {
+  .navigation__list {
+    gap: 20px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .navigation-box img {
+    max-width: 87px;
+    height: 55px;
+  }
+
+  .navigation-call {
+    padding: 10px 26px 11px 26px;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__btn {
+    display: flex;
+  }
+
+  .navigation__list {
+    display: none;
+  }
+
+  .navigation {
+    position: relative;
+    order: -1;
+  }
+
+  #menu__toggle {
+    display: inherit;
+  }
 }

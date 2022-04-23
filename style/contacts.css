@@ -46,7 +46,7 @@
   background-image: url("../img/figma/map.jpg");
   height: 274px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   justify-content: flex-end;
 }
 
@@ -103,4 +103,100 @@
 
 .design-by a:hover {
   color: #6C0287;
+}
+
+@media (max-width: 1024px) {
+  .contacts {
+    padding: 35px 0;
+  }
+
+  .contacts__map {
+    flex-basis: 542px;
+  }
+
+  .contacts__list {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .contacts-flex-box {
+    align-items: flex-start;
+    margin-bottom: 92px;
+  }
+
+  .contacts-social__svg {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-flex-box {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contacts__map {
+    flex-basis: 337px;
+    height: 337px;
+    width: 688px;
+  }
+
+  .contacts-text {
+    justify-items: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .contacts {
+    padding: 15px 0;
+  }
+
+  .contacts-flex-box {
+    gap: 35px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__list {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .contacts__item {
+    background-size: 20px 20px;
+    padding-left: 30px;
+  }
+
+  .contacts-social__svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contacts-social__link {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+
+  .contacts-flex-box {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contacts__map {
+    flex-basis: 194px;
+    height: 194px;
+    width: 100%;
+  }
+
+  .copyright-box {
+    flex-direction: column;
+   align-items: center;
+    gap: 20px;
+  }
+
+  .design-by {
+    justify-content: center;
+    flex-basis: 0;
+  }
 }

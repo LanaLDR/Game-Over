@@ -1,42 +1,60 @@
 .container-reviews {
-  max-width: 980px;
+  max-width: 1180px;
   display: flex;
-  min-height: 1058px;
+  max-height: 1058px;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.container-reviews:before {
+  content: url("../img/figma/slider-left.svg");
+  position: center;
+  align-self: center;
+}
+
+.container-reviews:after {
+  content: url("../img/figma/slider-left.svg");
+  transform: rotate(180deg);
+  align-self: center;
 }
 
 .reviews__title{
 
 }
 
-.reviews-list__item{
-  min-width: 980px;
-  min-height: 319px;
-  text-align: center;
-  margin-bottom: 50px;
-  display: inline-block;
-  position: relative;
+.reviews-list {
+  width: 83%;
 }
 
-.reviews__item__Max-photo {
-  content: "";
-  background-image: var(--reviews-gradient), url("../img/figma/MaxSamoilov.png");
+.reviews-list__item{
+  width: 100%;
+  height: 319px;
+  text-align: center;
+  display: flex;
+  flex-basis: 280px;
+  position: relative;
+  gap: 20px;
+}
+
+.reviews__item__photo {
   width: 280px;
   height: 280px;
   background-size: contain;
   background-repeat: no-repeat;
-  text-align: center;
-  display: inline-block;
-  float: left;
   margin-bottom: 11px;
-  margin-right: 20px;
   border-radius: 140px;
 }
 
+.reviews__item__photo-Max {
+  content: "";
+  background-image: var(--reviews-gradient), url("../img/figma/MaxSamoilov.png");
+}
+
 .reviews__quote {
-  max-width: 680px;
-  max-height: 88px;
   display: flex;
   text-align: left;
+  margin: 0;
+  width: 680px;
 }
 
 .reviews__quote blockquote {
@@ -44,51 +62,164 @@
   padding-top: 52px;
 }
 
-.reviews__quote {
-  margin: 0;
-  display: inline-block;
-}
-
-
 .reviews__item__name {
-  min-width: 280px;
   margin: 0;
   display: inline-block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
 
-.reviews__item__Oksana-photo {
+.reviews__item__photo-Oksana {
   content: "";
   background-image: var(--reviews-gradient), url("../img/figma/OksanaGrigoreva.png");
-  width: 280px;
-  height: 280px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-align: center;
-  display: inline-block;
-  float: left;
-  margin-bottom: 11px;
-  margin-right: 20px;
-  border-radius: 140px;
 }
 
-.reviews__item__Nikita-photo {
+.reviews__item__photo-Nikita {
   content: " ";
   background-image: var(--reviews-gradient), url("../img/figma/NikitaYashenko.png");
-  width: 280px;
-  height: 280px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-align: center;
-  display: inline-block;
-  float: left;
-  margin-bottom: 11px;
-  margin-right: 20px;
-  border-radius: 140px;
 }
 
 .reviews-list__item-Nikita {
   margin-bottom: 0;
+  display: none;
+}
+
+.reviews-list__item-Oksana {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    padding: 35px 0;
+  }
+
+  .reviews-list__item {
+    height: 219px;
+  }
+
+  .reviews__item__photo {
+    width: 172px;
+    height: 172px;
+    margin-bottom: 21px;
+  }
+
+  .reviews__quote {
+    font-size: 18px;
+    line-height: 26px;
+    width: 515px;
+  }
+
+  .reviews__item__name {
+    width: 170px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .reviews__item__photo-Max {
+    background-image: url("../img/figma/MaxSamoilov.png");
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: 30px 0;
+  }
+
+  .reviews-list__item {
+    height: 190px;
+  }
+
+  .reviews__item__photo {
+    width: 153px;
+    height: 153px;
+    margin-bottom: 21px;
+  }
+
+  .reviews__quote {
+    font-size: 16px;
+    line-height: 22px;
+    width: 393px;
+  }
+
+  .reviews__quote blockquote {
+    padding-top: 30px;
+  }
+
+  .reviews__item__name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .reviews {
+    padding: 15px 0;
+  }
+
+  .reviews-list {
+    width: 100% ;
+  }
+
+  .reviews-list__item {
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .reviews-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews__item__photo {
+    width: 86px;
+    height: 86px;
+    margin-bottom: 21px;
+    background-position: center;
+    object-position: center;
+  }
+
+  .reviews__quote {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .reviews__quote blockquote {
+    padding-top: 0;
+  }
+
+  .reviews__item__name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .container-reviews:after , .container-reviews:before {
+    display: none;
+  }
+
+  .reviews-box:before {
+    content: "";
+    background-image: url("../img/figma/slider-left.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 30px;
+  }
+
+  .reviews-box:after {
+    content: "";
+    background-image: url("../img/figma/slider-left.svg");
+    transform: rotate(180deg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 30px;
+  }
+
 }
